@@ -1,0 +1,50 @@
+$colorbg: rgb(243, 231, 240);
+$colorIndas: rgb(148, 36, 105);
+.Galeria {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    grid-row-gap: 15px;
+    margin-bottom: 2px;
+    .galeriaimg {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+.galeriaimg {
+    transition: 0.4s;
+    &:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Galeria {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-content: center;
+        .galeriaimg {
+            border: 2px solid $colorIndas;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Galeria {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .galeriaimg {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border: 2px solid $colorIndas;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+$colorbg: rgb(243, 231, 240);
+$colorIndas: rgb(148, 36, 105);
+$colorfocus: black;
+@mixin estilo {
+    background-color: $colorbg;
+    border: 1px;
+    border-radius: 15px;
+}
+
+form {
+    display: grid;
+    background: $colorIndas;
+    border: 1px solid #c1c1c1;
+    margin: 1rem auto;
+    max-width: 550px;
+    padding: 0.5em;
+    border-radius: 10px;
+    input {
+        @include estilo();
+    }
+    textarea {
+        @include estilo();
+    }
+    button {
+        background: $colorbg;
+        padding: 0.7em;
+        width: 100%;
+        margin-top: 5px;
+        border: 0;
+        border-radius: 15px;
+        &:hover {
+            background: grey;
+        }
+    }
+}
+
+label {
+    padding: 0.5em 0.5em 0.5em 0;
+}
+
+input {
+    padding: 0.7em;
+    margin-bottom: 0.5rem;
+    &:focus {
+        outline: 3px solid $colorfocus;
+    }
+}
+
+textarea {
+    &:focus {
+        outline: 3px solid $colorfocus;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    form {
+        background: #dedee4;
+        grid-template-columns: 75px 1fr;
+        grid-gap: 16px;
+    }
+    label {
+        grid-column: 1 / 2;
+    }
+    input {
+        grid-column: 2 / 3;
+    }
+    button {
+        grid-column: 2 / 3;
+    }
+    nav {
+        justify-content: flex-start;
+    }
+    li {
+        font-size: 15px;
+    }
+}

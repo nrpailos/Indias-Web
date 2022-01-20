@@ -1,0 +1,18 @@
+header {
+    display: flex;
+    object-fit: cover;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    .fotologo {
+        width: auto;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

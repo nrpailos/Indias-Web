@@ -1,0 +1,11 @@
+$colorIndas: rgb(148, 36, 105);
+.navbar {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.nav-link {
+    font-size: 20px;
+    color: $colorIndas;
+}

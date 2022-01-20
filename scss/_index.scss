@@ -1,0 +1,46 @@
+                        $colorbg: rgb(243, 231, 240);
+                        $colorIndas: rgb(148, 36, 105);
+                        %btn {
+                            width: 100%;
+                            text-align: center;
+                            padding: 5px 0;
+                            margin: 10px 0;
+                            border-radius: 2px;
+                            color: rgb(204, 199, 199);
+                        }
+                        
+                        body {
+                            background-color: $colorbg;
+                            .btn_success {
+                                @extend %btn;
+                                background-color: $colorIndas;
+                                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                                font-size: 25px;
+                            }
+                            .column {
+                                border: 1px solid whitesmoke;
+                                float: left;
+                                width: 25%;
+                                padding: 15px;
+                            }
+                            .row {
+                                &:after {
+                                    content: "";
+                                    display: table;
+                                    clear: both;
+                                }
+                            }
+                            .copy {
+                                @extend %btn;
+                            }
+                            @media screen and (max-width: 992px) {
+                                .column {
+                                    width: 50%;
+                                }
+                            }
+                            @media screen and (max-width: 600px) {
+                                .column {
+                                    width: 100%;
+                                }
+                            }
+                        }
